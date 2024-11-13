@@ -61,10 +61,11 @@
 # for buah in namaBuah:
 #     print(buah)
 
-nilai = 5 #inisialisasi tidak ada
-while nilai >= 1:
-    print(f"{nilai} - ""hello")
-    nilai -= 2
+nilai = 5
+while nilai >= 1 :
+    print (f"{nilai} - ""hello")
+    nilai = 2
+
 
 # jumlahKata = 0 #inisialisasi
 # kalimat = input("Masukkan kalimatmu.. : ") 
