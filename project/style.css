@@ -1,0 +1,83 @@
+/* Reset beberapa gaya default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Memastikan padding dan border tidak menambah ukuran elemen */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Mengatur font untuk seluruh halaman */
+    background-color: #f4f4f4; /* Mengatur warna latar belakang */
+    color: #333; /* Mengatur warna teks */
+    line-height: 1.6; /* Mengatur tinggi baris untuk keterbacaan */
+}
+
+header {
+    background: #35424a; /* Warna latar belakang header */
+    color: #ffffff; /* Warna teks header */
+    padding: 20px; /* Memberikan padding di dalam header */
+    text-align: center; /* Mengatur teks agar berada di tengah */
+}
+
+nav ul {
+    list-style: none; /* Menghilangkan bullet point dari daftar */
+}
+
+nav ul li {
+    display: inline; /* Menampilkan item daftar secara horizontal */
+    margin: 0 15px; /* Memberikan jarak antar item */
+}
+
+nav a {
+    color: #ffffff; /* Warna tautan */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+}
+
+section {
+    padding: 20px; /* Memberikan padding di dalam setiap section */
+    margin: 10px; /* Memberikan margin antar section */
+    background: #ffffff; /* Warna latar belakang section */
+    border-radius: 8px; /* Membuat sudut section menjadi melengkung */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan */
+}
+
+footer {
+    text-align: center; /* Mengatur teks footer agar berada di tengah */
+    padding: 10px; /* Memberikan padding di dalam footer */
+    background: #35424a; /* Warna latar belakang footer */
+    color: #ffffff; /* Warna teks footer */
+    position: relative; /* Memastikan footer tidak mengganggu layout */
+    bottom: 0; /* Menempatkan footer di bagian bawah */
+    width: 100%; /* Mengatur lebar footer menjadi 100% */
+}
+
+form {
+    display: flex; /* Menggunakan flexbox untuk tata letak form */
+    flex-direction: column; /* Mengatur arah elemen form menjadi kolom */
+}
+
+form label {
+    margin-top: 10px; /* Memberikan jarak atas pada label */
+}
+
+form input[type="text"],
+form input[type="email"] {
+    padding: 10px; /* Memberikan padding di dalam input */
+    margin-top: 5px; /* Memberikan jarak atas pada input */
+    border: 1px solid #ccc; /* Mengatur border input */
+    border-radius: 4px; /* Membuat sudut input menjadi melengkung */
+}
+
+form input[type="submit"] {
+    margin-top: 10px; /* Memberikan jarak atas pada tombol kirim */
+    padding: 10px; /* Memberikan padding di dalam tombol */
+    background: #35424a; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghilangkan border default */
+    border-radius: 4px; /* Membuat sudut tombol menjadi melengkung */
+    cursor: pointer; /* Mengubah kursor saat hover di tombol */
+}
+
+form input[type="submit"]:hover {
+    background: #45a049; /* Mengubah warna latar belakang saat hover */
+}
