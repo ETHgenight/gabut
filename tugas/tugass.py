@@ -61,10 +61,10 @@
 # for buah in namaBuah:
 #     print(buah)
 
-nilai = 5
-while nilai >= 1 :
+nilai = 1
+while nilai <= 5 :
     print (f"{nilai} - ""hello")
-    nilai = 2
+    nilai += 1
 
 
 # jumlahKata = 0 #inisialisasi
