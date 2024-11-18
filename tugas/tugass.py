@@ -61,15 +61,15 @@
 # for buah in namaBuah:
 #     print(buah)
 
-nilai = 1
-while nilai <= 5 :
-    print (f"{nilai} - ""hello")
-    nilai += 1
+# nilai = 1
+# while nilai <= 5 :
+#     print (f"{nilai} - ""hello")
+#     nilai += 1
 
 
 # jumlahKata = 0 #inisialisasi
 # kalimat = input("Masukkan kalimatmu.. : ") 
-# kata = kalimat.split() #memisah setiap kata, contoh = ["apa kabarmu"]  menjadi ["apa", "kabarmu"]
+# kata = kalimat.split() #memisah setiap kata, contoh = ["apa ka     barmu"]  menjadi ["apa", "kabarmu"]
 
 # for tiapkata in kata: 
 #     jumlahKata += 1 
@@ -100,5 +100,4 @@ while nilai <= 5 :
 #         print("Masukkan angka yang valid!")
 
 # print(f"Selamat! Anda berhasil menebak dalam {percobaan} percobaan.")
-
 
