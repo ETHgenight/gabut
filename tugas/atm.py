@@ -3,14 +3,14 @@ saldo = int(input("Masukkan saldo awal Anda: Rp. "))
 
 while True:
     # Tampilkan menu
-    print("\nMENU ATM")
+    print("MENU ATM")
     print("1. Cek Saldo")
     print("2. Tarik Tunai")
     print("3. Setor Tunai")
     print("4. Keluar")
 
     # Minta input pilihan menu dari pengguna
-    pilihan = input("Pilih menu (1-4): ")
+    pilihan = input("Pilih menu (1 - 4): ")
 
     if pilihan == "1":
         # Cek Saldo

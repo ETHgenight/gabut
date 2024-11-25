@@ -1,3 +1,11 @@
+# == sama dengan
+# > lebih dari
+# < kurang dari
+# != tidak sama dengan
+# >= lebih dari sama dengan
+# <= kurang dari sama dengan
+
+
 #  TUGASS TAXI ONLINE
 # variabel taxi online     
 #waktu_perjalanan = int(input("Masukkan waktu perjalanan: "))
@@ -51,20 +59,21 @@
 #    print("Kamu tidak masuk kualifikasi analisa sentimen (baik/buruk) kami.")
 
 
-# for x in range(4,10):
+# for x in range(1,10):
 #     print(x)
 
 # for x in "soto":
 #     print(x)
 
 # namaBuah = ["apel","jeruk","semangka"]
-# for buah in namaBuah:
-#     print(buah)
+# for buah in namaBuah: 
+#     print(buah)#
 
-# nilai = 1
-# while nilai <= 5 :
+# nilai = 3 
+# while nilai <= 9:
 #     print (f"{nilai} - ""hello")
-#     nilai += 1
+#     nilai += 3
+
 
 
 # jumlahKata = 0 #inisialisasi
@@ -78,26 +87,29 @@
 # print(f"jumlah kata {jumlahKata}")
 
 
-# import random #untuk memasukkan module angka acak
-# angka_rahasia = random.randint(1, 100) #angka acak antara 1-100
-# tebakan = 0
-# percobaan = 0
-# print("Hai, ayo kita bermain tebak angka!")
-# print("Saya telah memilih angka antara 1 sampai 100.")
-# while tebakan != angka_rahasia:
-#     try:                                        #try dan except untuk mengubah inisialisasi / suatu nilai 
-#                                                 #sehingga kondisi tidak terpenuhi / perulangan berhenti
-#         tebakan = int(input("Tebakan Anda: "))
-#         percobaan += 1
+import random #untuk memasukkan module angka acak
+angka_rahasia = random.randint(1, 100) #angka acak antara 1-100
+tebakan = 0
+percobaan = 0
+print("Hai, ayo kita bermain tebak angka!")
+print("Saya telah memilih angka antara 1 sampai 100.")
+while tebakan != angka_rahasia:
+    try:                                        #try dan except untuk mengubah inisialisasi / suatu nilai 
+                                                #sehingga kondisi tidak terpenuhi / perulangan berhenti
+        tebakan = int(input("Tebakan Anda: "))
+        percobaan += 1
 
-#         if tebakan < angka_rahasia:
-#             print("Terlalu rendah. Coba lagi!")
+        if tebakan < angka_rahasia:
+            print("Terlalu rendah. Coba lagi!")
 
-#         elif tebakan > angka_rahasia:
-#             print("Terlalu tinggi. Coba lagi!")
+        elif tebakan > angka_rahasia:
+            print("Terlalu tinggi. Coba lagi!")
 
-#     except ValueError:                          #program menampilkan "masukkan angka yang valid" ketika input bukan angka
-#         print("Masukkan angka yang valid!")
+    except ValueError:                          #program menampilkan "masukkan angka yang valid" ketika input bukan angka
+        print("Masukkan angka yang valid!")
 
-# print(f"Selamat! Anda berhasil menebak dalam {percobaan} percobaan.")
+print(f"Selamat! Anda berhasil menebak dalam {percobaan} percobaan.") 
+
+# a = input("masukkan angka pertama : ")
+# b = input("masukkan angka kedua : ") 
 
