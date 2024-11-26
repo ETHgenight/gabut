@@ -6,7 +6,7 @@
 # <= kurang dari sama dengan
 
 
-#  TUGASS TAXI ONLINE
+#  TUGASS TAXI ONLINE  
 # variabel taxi online     
 #waktu_perjalanan = int(input("Masukkan waktu perjalanan: "))
 #jarak_tempuh = int(input("Masukkan jarak tempuh: "))
@@ -26,10 +26,10 @@
     #print(f"Tarif perjalanan Anda adalah: Rp {tarif}")
 
 #   TUGAS SENTIMEN oktober-7-SENIN
-#produk_yang_dibeli = input("produk apa yang baru kamu beli? ")
-#komentar_produk_yang_dibeli = input(f"Apa komentar mu tentang produk {produk_yang_dibeli} yang baru kamu beli ? ")
+# produk_yang_dibeli = input("produk apa yang baru kamu beli? ")
+# komentar_produk_yang_dibeli = input(f"Apa komentar mu tentang produk {produk_yang_dibeli} yang baru kamu beli ? ")
 
-#def analisa_komentar(komentar):
+# def analisa_komentar(komentar):
 #    hasil = []
 #    for komen in komentar.split(" "):
 #        if "buruk" in komen and not "buruk" in hasil:
@@ -48,14 +48,14 @@
 #        return "invalid"
 
 
-#hasil_analisa_komentar = analisa_komentar(komentar_produk_yang_dibeli)
-#if "1baik" in hasil_analisa_komentar:
+# hasil_analisa_komentar = analisa_komentar(komentar_produk_yang_dibeli)
+# if "1baik" in hasil_analisa_komentar:
 #    print("Anda mengomentari produk ini baik.")
-#elif "1buruk" in hasil_analisa_komentar:
+# elif "1buruk" in hasil_analisa_komentar:
 #    print("Anda mengomentari produk ini buruk.")
-#elif "baik, buruk" in hasil_analisa_komentar:
+# elif "baik, buruk" in hasil_analisa_komentar:
 #    print("Anda mengomentari produk ini netral")
-#else:
+# else:
 #    print("Kamu tidak masuk kualifikasi analisa sentimen (baik/buruk) kami.")
 
 
@@ -87,28 +87,28 @@
 # print(f"jumlah kata {jumlahKata}")
 
 
-import random #untuk memasukkan module angka acak
-angka_rahasia = random.randint(1, 100) #angka acak antara 1-100
-tebakan = 0
-percobaan = 0
-print("Hai, ayo kita bermain tebak angka!")
-print("Saya telah memilih angka antara 1 sampai 100.")
-while tebakan != angka_rahasia:
-    try:                                        #try dan except untuk mengubah inisialisasi / suatu nilai 
-                                                #sehingga kondisi tidak terpenuhi / perulangan berhenti
-        tebakan = int(input("Tebakan Anda: "))
-        percobaan += 1
+# import random #untuk memasukkan module angka acak
+# angka_rahasia = random.randint(1, 100) #angka acak antara 1-100
+# tebakan = 0
+# percobaan = 0
+# print("Hai, ayo kita bermain tebak angka!")
+# print("Saya telah memilih angka antara 1 sampai 100.")
+# while tebakan != angka_rahasia:
+#     try:                                        #try dan except untuk mengubah inisialisasi / suatu nilai 
+#                                                 #sehingga kondisi tidak terpenuhi / perulangan berhenti
+#         tebakan = int(input("Tebakan Anda: "))
+#         percobaan += 1
 
-        if tebakan < angka_rahasia:
-            print("Terlalu rendah. Coba lagi!")
+#         if tebakan < angka_rahasia:
+#             print("Terlalu rendah. Coba lagi!")
 
-        elif tebakan > angka_rahasia:
-            print("Terlalu tinggi. Coba lagi!")
+#         elif tebakan > angka_rahasia:
+#             print("Terlalu tinggi. Coba lagi!")
 
-    except ValueError:                          #program menampilkan "masukkan angka yang valid" ketika input bukan angka
-        print("Masukkan angka yang valid!")
+#     except ValueError:                          #program menampilkan "masukkan angka yang valid" ketika input bukan angka
+#         print("Masukkan angka yang valid!")
 
-print(f"Selamat! Anda berhasil menebak dalam {percobaan} percobaan.") 
+# print(f"Selamat! Anda berhasil menebak dalam {percobaan} percobaan.") 
 
 # a = input("masukkan angka pertama : ")
 # b = input("masukkan angka kedua : ") 
