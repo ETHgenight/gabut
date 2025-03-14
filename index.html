@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+    <div id="root"></div>
+
+    <script>
+        const App = () => {
+            const [snake, setSnake] = React.useState([
+                [{x: 10, y: 10}]
+            ]);
+            const [food, setFood] = React.useState({x: 5, y: 5});
+            const [direction, setDirection] = React.useState({x: 0, y: 0});
+            const [gameOver, setGameOver] = React.useState(false);
+            const [score, setScore] = React.useState(0);
+
+            const GRID_SIZE = 20;
+            const INITIAL_SPEED = 150;
+
+            useEffect(() => {
+                if (gameOver) return;
+
+                const handleKeyPress = (e) => {
+                    switch(e.key) {
+                        case 'ArrowUp':
+                            if (direction.y !== 1) setDirection({x: 0, y: -1});
+                            break;
+                        case 'ArrowDown':
+                            if (direction.y !== -1) setDirection({x: 0, y: 1});
+                            break;
+                        case 'ArrowLeft':
+                            if (direction.x !== 1) setDirection({x: -1, y: 0});
+                            break;
+                        case 'ArrowRight':
+                            if (direction.x !== -1) setDirection({x: 1, y: 0});
+                            break;
+                    }
+                };
+
+                window.addEventListener('keydown', handleKeyPress);
+                return () => window.removeEventListener('keydown', handleKeyPress);
+            }, [direction, gameOver]);
+
+            useEffect(() => {
+                if (gameOver) return;
+
+                const moveSnake = () => {
+                    const newSnake = [...snake];
+                    const head = {...newSnake[0]};
+
+                    switch(direction.x) {
+                        case 1: 
+                            head.x += 1;
+                            break;
+                        case -1:
+                            head.x -= 1;
+                            break;
+                    }
+
+                    switch(direction.y) {
+                        case 1:
+                            head.y += 1;
+                            break;
+                        case -1:
+                            head.y -= 1;
+                            break;
+                    }
+
+                    // Check collision with walls
+                    if (head.x < 0 || head.x >= GRID_SIZE || head.y <script 0 || head.y >= GRID_SIZE) {
+                        setGameOver(true);
+                        return;
+                    }
+
+                    // Check self-collision
+                    const newHead = [head.x, head.y];
+                    if (newSnake.some(segment => segment.x === newHead.x && segment.y === newHead.y)) {
+                        setGameOver(true);
+                        return;
+                    }
+
+                    newSnake.unshift(head);
+
+                    // Check food collision
+                    if (head.x === food.x && head.y === food.y) {
+                        setScore(prev => prev + 1);
+                        generateFood();
+                    } else {
+                        newSnake.pop();
+                    }
+
+                    setSnake(newSnake);
+                };
+
+                const gameInterval = setInterval(moveSnake, INITIAL_SPEED);
+                return () => clearInterval(gameInterval);
+            }, [snake, food, direction, gameOver]);
+
+            const generateFood = () => {
+                const newFood = {...food};
+                do {
+                    newFood.x = Math.floor(Math.random() * GRID_SIZE);
+                    newFood.y = Math.floor(Math.random() * GRID_SIZE);
+                } while (newSnake.some(segment => segment.x === newFood.x && segment.y === newFood.y));
+                setFood(newFood);
+            };
+
+            return (
+    </script>
+                <div className="min-h-screen flex flex-col items-center justify-center p-4">
+                    <h1 className="text-4xl font-bold mb-8">Snake Game</h1>
+                    
+                    {gameOver && (
+                        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center text-white">
+                            <p className="text-2xl text-center">Game Over!</p>
+                        </div>
+                    )}
+                    
+                    <div className="relative bg-gray-900 aspect-video rounded-lg overflow-hidden">
+                        <div className="absolute inset-0 bg-grid grid-cols-{GRID_SIZE} grid-rows-{GRID_SIZE}" 
+                             style={{gridTemplateColumns: `repeat(${GRID_SIZE}, minmax(0, 1fr))`, gridTemplateRows: `repeat(${GRID_SIZE}, minmax(0, 1fr))`}>
+                            {snake.map((segment, index) => (
+                                <div key={index} className="bg-green-500 rounded-sm">
+                                    <div className="w-full h-full object-cover" />
+                                </div>
+                            ))}
+                        </div>
+                        
+                        <div 
+                            className="absolute inset-0 bg-red-500 rounded-lg transition duration-300"
+                            style={{left: `${food.x * 100}%`, top: `${food.y * 100}%`}}
+                        />
+                    </div>
+
+                    <div className="mt-8 text-center">
+                        <p className="text-xl">Score: {score}</p>
+                        <p className="text-xl mt-2">Level: {Math.floor(score / 50)}</p>
+                    </div>
+
+                    <div className="mt-8 text-gray-400 text-center">
+                        <p>Use arrow keys to control the snake</p>
+                        <p>Collect food to grow and earn points!</p>
+                    </div>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

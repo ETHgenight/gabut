@@ -7,13 +7,13 @@
 
 body {
     font-family: Arial, sans-serif; /* Mengatur font untuk seluruh halaman */
-    background-color: #f4f4f4; /* Mengatur warna latar belakang */
-    color: #333; /* Mengatur warna teks */
+    background-color: #9b5252; /* Mengatur warna latar belakang */
+    color: #fff5f5; /* Mengatur warna teks */
     line-height: 1.6; /* Mengatur tinggi baris untuk keterbacaan */
 }
 
 header {
-    background: #35424a; /* Warna latar belakang header */
+    background: #163547; /* Warna latar belakang header */
     color: #ffffff; /* Warna teks header */
     padding: 20px; /* Memberikan padding di dalam header */
     text-align: center; /* Mengatur teks agar berada di tengah */
@@ -29,14 +29,14 @@ nav ul li {
 }
 
 nav a {
-    color: #ffffff; /* Warna tautan */
+    color: #f1e9e9; /* Warna tautan */
     text-decoration: none; /* Menghilangkan garis bawah pada tautan */
 }
 
 section {
     padding: 20px; /* Memberikan padding di dalam setiap section */
     margin: 10px; /* Memberikan margin antar section */
-    background: #ffffff; /* Warna latar belakang section */
+    background: #3c483d; /* Warna latar belakang section */
     border-radius: 8px; /* Membuat sudut section menjadi melengkung */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan */
 }
